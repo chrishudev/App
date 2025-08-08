@@ -10,11 +10,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -80,7 +78,7 @@ fun Tabs(modifier: Modifier = Modifier, page: Int){
         when(page) {
             0 -> Text(text="Daily page", modifier = modifier)
             1 -> Text(text="Weekly page", modifier = modifier)
-            2 -> Text(text="To-do page", modifier = modifier)
+            2 -> TaskForm(modifier)
             else -> Text(text="Error page", modifier = modifier)
         }
     }
